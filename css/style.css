@@ -77,6 +77,7 @@ main {
 
 .section-last {
     border: none;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -166,10 +167,7 @@ main {
       background-image: url(../images/github.png);
   }
 
-  .avatar {   
-    width: 190px;
-    height: 199px;
-    background-image: url(../images/kot_6573.jpg);
+  .avatar {
     background-size: contain;
     background-repeat: no-repeat;
     margin: 10px 50px;
