@@ -4,9 +4,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./images/favicon123.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Heebo&display=swap" rel="stylesheet">
+    <title>CV</title>
 </head>
 <body>
-    
+
+    <div class="work-space">
+        
+        <header class="header-conteiner">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#profile" class="nav-link">Profile</a></li>
+                    <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+                    <li class="nav-item"><a href="#summary" class="nav-link">Summary</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#languages" class="nav-link">Languages</a></li>
+                    <li class="nav-item"><a href="#code" class="nav-link">Code</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="main-conteiner">  
+            <div class="conteiner">
+                <div class="profile-conteiner">
+                    <section class="" id="profile">
+                        <h1 class="section-title">Igor Mychko</h1>                        
+                    </section>
+
+                    <img class="avatar">
+                    <div>Front End Developer</div>
+                </div>
+
+                <div class="info-conteiner">
+                    <section class="section" id="contacts">
+                        <h2 class="section-title">Contacts</h2>
+                        <ul>
+                            <li>Location: Minsk, Belarus</li>
+                            <li>e-mail: mpirog@mail.ru</li>
+                            <li>tel: +375 (55) 555-555</li>
+                            <li>Github: https://github.com/mpirog</li>
+                        </ul>
+                    </section>
+
+                    <section class="section" id="summary">
+                        <h2 class="section-title">Summary</h2>
+                        <div>
+                            This section should contain some information about hobbies, training, experience, goals, etc.
+                            It will be added later in the future if necessary.
+                        </div>
+                    </section>
+
+                    <section class="section" id="education">
+                        <h2 class="section-title">Education</h2>
+                        <div>Belorusian State University Of Informatics AND Radioelectronics</div>
+                    </section>
+
+                    <section class="section" id="skills">
+                        <h2 class="section-title">Skills</h2>
+                        <div>
+                            <ul>
+                                <li>Web-development: HTML5, CSS3, JavaScript</li>
+                                <li>Version control: GIT, Github</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="section section-last" id="languages">
+                        <h2 class="section-title">Languages</h2>
+                        <ul>                                
+                            <li>English: B1 intermediate</li>
+                            <li>Russian: C2 Native</li>  
+                            <li>Belorusian: B2 intermediate</li>  
+                        </ul>
+                    </section>
+
+                    <section class="section section-last" id="code">
+                        <h2 class="section-title">Code</h2>
+                        <pre>
+                            <code class="code-container">
+const buttons = document.querySelectorAll('.button')
+buttons.forEach(elem => {
+    elem.addEventListener('click', event => {
+        const type = elem.getAttribute('data-action-type')
+        let buttValue = elem.getAttribute('data-value')
+        let value = inputElem.getAttribute('data-value')
+        switch (type) {
+            case 'number':
+                if (value.length > 16) {
+                    return
+                }
+                addValue(inputElem, value, buttValue)
+                break;
+            case 'clear':
+                clearValue(inputElem, buttValue, true)
+                result = 0;
+                inputElem.setAttribute('data-value', '0')
+                break;
+            case 'clear_end':
+                clearValue(inputElem, buttValue)
+                break;
+            case 'clear_last':
+                clearLsatPsitionValue(inputElem, value, buttValue)
+                break;
+            default:
+                value = calculate(value, type)
+                inputElem.setAttribute('data-value', '0')
+                inputElem.innerHTML = result
+        }
+    })
+})
+                        </code>
+                        </pre>
+                    </section>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer-conteiner">
+            <div>&copy;2022</div> 
+            <a href="https://github.com/mpirog" class="github-icon footer-icon"></a>        
+            <a href="https://rs.school/js/" class="rss-icon footer-icon"></a>
+        </footer>
+
+    </div>
+
 </body>
 </html>
